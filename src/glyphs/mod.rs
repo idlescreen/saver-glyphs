@@ -56,7 +56,7 @@ impl Default for Glyphs {
 impl Glyphs {
     pub fn new() -> Self {
         let mut char_pool: Vec<char> = CHAR_POOL_KATAKANA.chars().collect();
-        let mut rng = LcgRng::new_random();
+        let mut rng = LcgRng::from_env_or_random();
         let sys = get_system_info();
         let live_system_chars: Vec<char> = sys
             .hostname
