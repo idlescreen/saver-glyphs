@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Glyphs
+Comment=Screensaver effect: glyphs
+Exec=trance preview glyphs
+Icon=trance-glyphs
+Terminal=false
+Categories=Screensaver;
