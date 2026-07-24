@@ -1,7 +1,7 @@
 [package]
 license = "Apache-2.0"
 name = "glyphs"
-version = "1.0.27"
+version = "2.0.0"
 edition = "2024"
 description = "Matrix-style rain with live system information"
 publish = false
@@ -20,28 +20,37 @@ libc = "0.2"
 embed-resource = "2"
 
 [package.metadata.deb]
-name = "trance-plugin-glyphs"
+name = "saver-glyphs"
+provides = "trance-plugin-glyphs"
+replaces = "trance-plugin-glyphs"
+conflicts = "trance-plugin-glyphs (<< 2.0.0)"
 maintainer = "idlescreen <jerydleuck@gmail.com>"
 extended-description = "Matrix-style rain with live system information. Official IdleScreen (Trance) screensaver plugin."
 depends = "libc6"
 section = "utils"
 priority = "optional"
 assets = [
-    ["target/release/libscreensaver_glyphs.so", "usr/libexec/trance/screensavers/libscreensaver_glyphs.so", "644"],
-    ["assets/trance-glyphs.png", "usr/share/pixmaps/trance-glyphs.png", "644"]
+    ["target/release/libscreensaver_glyphs.so", "usr/libexec/idlescreen/screensavers/libscreensaver_glyphs.so", "644"],
+    ["assets/idlescreen-glyphs.png", "usr/share/pixmaps/idlescreen-glyphs.png", "644"]
 ]
 
 [package.metadata.generate-rpm]
-name = "trance-plugin-glyphs"
+name = "saver-glyphs"
 release = "1"
 arch = "x86_64"
 summary = "Matrix-style rain with live system information"
 description = "Matrix-style rain with live system information"
 license = "Apache-2.0"
 assets = [
-    { source = "target/release/libscreensaver_glyphs.so", dest = "/usr/libexec/trance/screensavers/libscreensaver_glyphs.so", mode = "644", user = "root", group = "root" },
-    { source = "assets/trance-glyphs.png", dest = "/usr/share/pixmaps/trance-glyphs.png", mode = "644", user = "root", group = "root" }
+    { source = "target/release/libscreensaver_glyphs.so", dest = "/usr/libexec/idlescreen/screensavers/libscreensaver_glyphs.so", mode = "644", user = "root", group = "root" },
+    { source = "assets/idlescreen-glyphs.png", dest = "/usr/share/pixmaps/idlescreen-glyphs.png", mode = "644", user = "root", group = "root" }
 ]
 
 [package.metadata.generate-rpm.requires]
-trance = "*"
+idlescreen = "*"
+
+[package.metadata.generate-rpm.provides]
+trance-plugin-glyphs = "*"
+
+[package.metadata.generate-rpm.obsoletes]
+trance-plugin-glyphs = "*"
