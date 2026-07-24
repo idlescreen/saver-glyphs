@@ -30,7 +30,7 @@ depends = "libc6"
 section = "utils"
 priority = "optional"
 assets = [
-    ["target/release/libscreensaver_glyphs.so", "usr/libexec/idlescreen/screensavers/libscreensaver_glyphs.so", "644"],
+    ["target/release/libscreensaver_glyphs.so", "usr/libexec/idle/screensavers/libscreensaver_glyphs.so", "644"],
     ["assets/idlescreen-glyphs.png", "usr/share/pixmaps/idlescreen-glyphs.png", "644"]
 ]
 
