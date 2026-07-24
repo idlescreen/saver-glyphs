@@ -1,15 +1,15 @@
 # saver-glyphs
 
-Official **glyphs** visualizer plugin for [IdleScreen](https://github.com/idlescreen/idle-core).
+Official **glyphs** visualizer plugin for [IdleScreen](https://github.com/idlescreen/idle).
 
 ## Build
 
-Requires a sibling checkout of the core daemon for `idle-api`:
+Requires the idle engine checked out into `./idle` for `idle-api` path deps:
 
 ```bash
-git clone https://github.com/idlescreen/idle-core.git
-git clone https://github.com/idlescreen/saver-glyphs.git
-cd saver-glyphs
+git clone https://github.com/idlescreen/idle-saver-glyphs.git
+cd idle-saver-glyphs
+git clone https://github.com/idlescreen/idle.git idle
 cargo build --release
 ```
 
