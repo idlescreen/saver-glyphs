@@ -4,7 +4,7 @@ Official **glyphs** visualizer plugin for [IdleScreen](https://github.com/idlesc
 
 ## Build
 
-Requires a sibling checkout of the core daemon for `trance-api`:
+Requires a sibling checkout of the core daemon for `idle-api`:
 
 ```bash
 git clone https://github.com/idlescreen/idle-core.git
@@ -18,8 +18,8 @@ cargo build --release
 After adding the IdleScreen package repository:
 
 ```bash
-sudo apt install trance-saver-glyphs
-# or: sudo dnf install trance-saver-glyphs
+sudo apt install idle-saver-glyphs
+# or: sudo dnf install idle-saver-glyphs
 ```
 
 See [idlescreen.github.io/packages](https://idlescreen.github.io/packages/).

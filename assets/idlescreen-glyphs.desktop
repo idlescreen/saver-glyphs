@@ -2,7 +2,7 @@
 Type=Application
 Name=Glyphs
 Comment=Screensaver effect: glyphs
-Exec=trance preview glyphs
+Exec=idle preview glyphs
 Icon=trance-glyphs
 Terminal=false
 Categories=Screensaver;
